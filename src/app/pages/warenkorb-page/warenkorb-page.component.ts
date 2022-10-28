@@ -1,29 +1,27 @@
-import {Component, Injector, OnInit, ɵLifecycleHooksFeature, ɵrenderComponent} from '@angular/core';
+import {Component} from '@angular/core';
 import {Reise} from '../../models/common';
 import {Observable} from 'rxjs';
 import {BasketService} from '../../services/basket.service';
+import {CommonModule} from '@angular/common';
+import {MaterialModule} from '../../material.module';
+import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 @Component({
-  selector: 'app-warenkorb-page',
-  templateUrl: './warenkorb-page.component.html',
-  styleUrls: ['./warenkorb-page.component.scss']
+    standalone: true,
+    imports: [
+        CommonModule,
+        MaterialModule,
+        PerfectScrollbarModule
+    ],
+    selector: 'app-warenkorb-page',
+    templateUrl: './warenkorb-page.component.html',
+    styleUrls: ['./warenkorb-page.component.scss']
 })
-export class WarenkorbPageComponent implements OnInit {
+export class WarenkorbPageComponent {
 
-  basket$: Observable<Reise[]>;
+    basket$: Observable<Reise[]>;
 
-  constructor(private basketService: BasketService,
-              private injector: Injector) {
-    this.basket$ = this.basketService.selectAll();
-  }
-
-  ngOnInit() {
-    // this.renderComponent();
-  }
-
-  renderComponent() {
-    import('../../components/counter/counter.component').then((c) => {
-      ɵrenderComponent(c.CounterComponent, {host: 'my-counter', injector: this.injector, hostFeatures: [ɵLifecycleHooksFeature]});
-    });
-  }
+    constructor(private basketService: BasketService) {
+        this.basket$ = this.basketService.selectAll();
+    }
 }

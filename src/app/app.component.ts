@@ -1,16 +1,15 @@
 import {Component} from '@angular/core';
-import {ZonelessRouterService} from './services/zoneless-router.service';
+import {NavigationComponent} from './components/navigation/navigation.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    standalone: true,
+    selector: 'app-root',
+    imports: [
+        NavigationComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'performance-app';
-
-  constructor(private zonelessRouting: ZonelessRouterService) {
-    zonelessRouting.init();
-  }
-
+    title = 'standalone-app';
 }

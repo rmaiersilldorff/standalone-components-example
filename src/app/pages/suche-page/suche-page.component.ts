@@ -12,7 +12,7 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 @Component({
   standalone: true,
-  selector: 'app-root',
+  selector: 'app-suche-page',
   imports: [
     ReiseListItemComponent,
     MaterialModule,
