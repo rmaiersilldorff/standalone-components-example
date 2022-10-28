@@ -17,7 +17,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@reise": [
+        "src/app/reise/index.ts"
+      ],
+      "@angebote": [
+        "src/app/angebote/index.ts"
+      ],
+      "@suche": [
+        "src/app/suche/index.ts"
+      ],
+      "@warenkorb": [
+        "src/app/warenkorb/index.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

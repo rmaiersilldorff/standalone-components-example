@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Reise} from '../../models/common';
-import {BehaviorSubject} from 'rxjs';
-import {ReiseCardComponent} from '../reise-card/reise-card.component';
+import {Reise} from '../../../reise/models/common';
+import {ReiseCardComponent} from '../../../reise/reise-card/reise-card.component';
 import {CommonModule} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
@@ -18,7 +17,7 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 })
 export class AngebotListComponent {
 
-    @Input() angebote$: BehaviorSubject<Reise[]> = new BehaviorSubject<Reise[]>([]);
+    @Input() angebote: Reise[] = [];
 
     trackByFn(index: number, item: Reise) {
         return item.id;

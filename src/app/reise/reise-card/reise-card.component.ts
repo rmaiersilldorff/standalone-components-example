@@ -1,5 +1,5 @@
 import {Component, ElementRef, Input, NgZone} from '@angular/core';
-import {Reise} from '../../models/common';
+import {Reise} from '../models/common';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../../material.module';
 

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
-import {Basket, Reise} from '../models/common';
+import {Basket, Reise} from '../reise/models/common';
 import {map, scan, shareReplay, startWith} from 'rxjs/operators';
 
 @Injectable({

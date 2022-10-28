@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable, of} from 'rxjs';
-import {Reise} from '../models/common';
-import {delay, map, switchMap} from 'rxjs/operators';
+import {Observable, of} from 'rxjs';
+import {Reise} from './models/common';
+import {delay, map} from 'rxjs/operators';
 import * as faker from 'faker/locale/de';
 
 @Injectable({
@@ -15,21 +15,6 @@ export class ReiseService {
 
   getAngebote(): Observable<Reise[]> {
     return this.reisen$.pipe(delay(100));
-  }
-
-  changeAngebot(id: number): Observable<Reise[]> {
-    return this.reisen$.pipe(
-      map((reisen) =>
-        reisen.map((reise, index) => index === id ? ({...reise, header: `Item ${reise.id} has changed`}) : reise)
-      ),
-      delay(200));
-  }
-
-  addAngebot(): Observable<Reise[]> {
-    return this.reisen$.pipe(
-      switchMap((items) => of(items.concat(this.fakeReise()))),
-      delay(200)
-    );
   }
 
   getAll(): Observable<Reise[]> {

@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 import {Reise} from '../../models/common';
-import {MaterialModule} from '../../material.module';
+import {MaterialModule} from '../../../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
@@ -14,7 +14,6 @@ import {CommonModule} from '@angular/common';
     CommonModule
   ],
   templateUrl: './reise-list-item.component.html',
-  styleUrls: ['./reise-list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ReiseListItemComponent {
