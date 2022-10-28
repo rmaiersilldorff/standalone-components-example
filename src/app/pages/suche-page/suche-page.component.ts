@@ -3,11 +3,12 @@ import {ReiseService} from '../../services/reise.service';
 import {Reise} from '../../models/common';
 import {Observable} from 'rxjs';
 import {first, startWith, switchMap} from 'rxjs/operators';
-import {FormsModule, ReactiveFormsModule, UntypedFormControl} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import {BasketService} from '../../services/basket.service';
 import {ReiseListItemComponent} from '../../components/reise-list-item/reise-list-item.component';
 import {MaterialModule} from '../../material.module';
 import {CommonModule} from '@angular/common';
+import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 
 @Component({
   standalone: true,
@@ -17,7 +18,8 @@ import {CommonModule} from '@angular/common';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    PerfectScrollbarModule
   ],
   templateUrl: './suche-page.component.html',
   styleUrls: ['./suche-page.component.scss']
@@ -25,7 +27,7 @@ import {CommonModule} from '@angular/common';
 export class SuchePageComponent implements OnInit {
 
   reisen: Reise[];
-  sucheControl = new UntypedFormControl();
+  sucheControl = new FormControl<string>('');
   filteredReisen$: Observable<Reise[]>;
 
   constructor(private reiseService: ReiseService,
