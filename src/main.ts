@@ -24,7 +24,7 @@ bootstrapApplication(AppComponent, {
 
         // setup ngrx
         provideStore(reducer),
-        provideEffects([]),
+        provideEffects(),
         provideStoreDevtools(),
 
         // importProvidersFrom(AngeboteModule)

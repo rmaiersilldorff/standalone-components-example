@@ -9,7 +9,7 @@ export const angeboteRoutes: Routes = [
     {
         path: '', component: AngebotPageComponent, providers: [
             provideState(angeboteFeature),
-            provideEffects([AngeboteEffects])
+            provideEffects(AngeboteEffects)
         ],
     }
 ];
