@@ -5,7 +5,7 @@ import {map, shareReplay} from 'rxjs/operators';
 import {BasketService} from '../../warenkorb/basket.service';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../../material.module';
-import {RouterLink, RouterLinkWithHref, RouterOutlet} from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
     standalone: true,
@@ -13,7 +13,7 @@ import {RouterLink, RouterLinkWithHref, RouterOutlet} from '@angular/router';
         CommonModule,
         MaterialModule,
         RouterOutlet,
-        RouterLinkWithHref,
+        RouterLink,
         RouterLink,
     ],
     selector: 'app-navigation',
