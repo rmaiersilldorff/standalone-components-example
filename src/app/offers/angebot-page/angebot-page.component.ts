@@ -1,7 +1,7 @@
 import {Component, Inject} from '@angular/core';
-import {ReiseService} from '@reise';
+import {ReiseService} from '../../journy';
 import {MaterialModule} from '../../material.module';
-import {AngebotListComponent} from '@angebote';
+import {AngebotListComponent} from '..';
 import {CommonModule} from '@angular/common';
 import {Store} from '@ngrx/store';
 import {ReiseSlice} from '../+state/reducers';

@@ -1,13 +1,13 @@
 import {Component, Input} from '@angular/core';
-import {Reise} from '../../../reise/models/common';
-import {CommonModule} from '@angular/common';
+import {Reise} from '../../../journy/models/common';
+import {CommonModule, NgFor} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
-import {ReiseCardComponent} from '../../../reise/reise-card/reise-card.component';
+import {ReiseCardComponent} from '../../../journy/reise-card/reise-card.component';
 
 @Component({
     standalone: true,
     imports: [
-        CommonModule,
+        NgFor,
         ReiseCardComponent,
         PerfectScrollbarModule
     ],

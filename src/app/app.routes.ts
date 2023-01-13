@@ -1,15 +1,15 @@
 import {Routes} from '@angular/router';
-import {WarenkorbPageComponent} from '@warenkorb';
+import {WarenkorbPageComponent} from './basket';
 
 export const appRoutes: Routes = [
     {
         path: 'angebote',
-        loadChildren: () => import('./angebote/angebote.routes')
+        loadChildren: () => import('./offers/angebote.routes')
           // .then((m) => m.angeboteRoutes)
     },
     {
         path: 'suche',
-        loadChildren: () => import('./suche/suche.routes')
+        loadChildren: () => import('./search/suche.routes')
          // .then((m) => m.sucheRoutes)
     },
     {path: 'warenkorb', component: WarenkorbPageComponent},

@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {ReiseService} from '../../reise/reise.service';
-import {Reise} from '../../reise/models/common';
+import {ReiseService} from '../../journy/reise.service';
+import {Reise} from '../../journy/models/common';
 import {Observable} from 'rxjs';
 import {first, startWith, switchMap} from 'rxjs/operators';
 import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
-import {BasketService} from '../../warenkorb/basket.service';
-import {ReiseListItemComponent} from '../../reise/reise-card/reise-list-item/reise-list-item.component';
+import {BasketService} from '../../basket/basket.service';
+import {ReiseListItemComponent} from '../../journy/reise-card/reise-list-item/reise-list-item.component';
 import {MaterialModule} from '../../material.module';
 import {CommonModule} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';

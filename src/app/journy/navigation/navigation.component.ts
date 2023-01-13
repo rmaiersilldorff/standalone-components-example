@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
-import {BasketService} from '../../warenkorb/basket.service';
+import {BasketService} from '../../basket/basket.service';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../../material.module';
 import { RouterLink, RouterOutlet } from '@angular/router';
