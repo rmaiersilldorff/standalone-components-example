@@ -13,3 +13,5 @@ export const angeboteRoutes: Routes = [
         ],
     }
 ];
+
+export default angeboteRoutes;

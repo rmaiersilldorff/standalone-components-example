@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
 import {Reise} from '../../../reise/models/common';
-import {ReiseCardComponent} from '../../../reise/reise-card/reise-card.component';
 import {CommonModule} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
+import {ReiseCardComponent} from '../../../reise/reise-card/reise-card.component';
 
 @Component({
     standalone: true,
@@ -12,8 +12,15 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
         PerfectScrollbarModule
     ],
     selector: 'app-angebot-list',
-    templateUrl: './angebot-list.component.html',
-    styleUrls: ['./angebot-list.component.scss']
+    styleUrls: ['./angebot-list.component.scss'],
+    template: `
+        <div class="reise-container" [perfectScrollbar]="{}">
+            <app-reise-card *ngFor="let angebot of angebote; trackBy: trackByFn"
+                            [reise]="angebot"
+                            class="pb-2">
+            </app-reise-card>
+        </div>
+    `
 })
 export class AngebotListComponent {
 
