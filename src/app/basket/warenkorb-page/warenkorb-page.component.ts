@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Reise} from '../../journy/models/common';
+import {Reise} from '../../journey/models/common';
 import {Observable} from 'rxjs';
 import {BasketService} from '../basket.service';
 import {CommonModule} from '@angular/common';

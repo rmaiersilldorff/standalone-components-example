@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, switchMap } from 'rxjs';
 import { loadAngebote, loadAngeboteSuccess } from './actions';
-import {ReiseService} from '../../journy/reise.service';
-import {Reise} from '../../journy/models/common';
+import {ReiseService} from '../../journey/reise.service';
+import {Reise} from '../../journey/models/common';
 
 @Injectable({
     providedIn: 'root'

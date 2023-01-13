@@ -1,6 +1,6 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { loadAngeboteSuccess } from './actions';
-import {Reise} from '../../journy/models/common';
+import {Reise} from '../../journey/models/common';
 
 export const REISE_FEATURE_KEY = 'reise';
 

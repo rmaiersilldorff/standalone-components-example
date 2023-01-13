@@ -1,5 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {ReiseService} from '../../journy';
+import {ReiseService} from '../../journey';
 import {MaterialModule} from '../../material.module';
 import {AngebotListComponent} from '..';
 import {CommonModule} from '@angular/common';

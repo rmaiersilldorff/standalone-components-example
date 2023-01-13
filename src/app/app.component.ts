@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavigationComponent} from './journy/navigation/navigation.component';
+import {NavigationComponent} from './journey/navigation/navigation.component';
 
 @Component({
     standalone: true,

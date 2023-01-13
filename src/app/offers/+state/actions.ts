@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import {Reise} from '../../journy/models/common';
+import {Reise} from '../../journey/models/common';
 
 export const loadAngebote = createAction(
     '[Reise] loadAngebote',
