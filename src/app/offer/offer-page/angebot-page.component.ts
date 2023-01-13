@@ -1,5 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {ReiseService} from '../../journey';
+import {JourneyService} from '../../journey';
 import {MaterialModule} from '../../material.module';
 import {AngebotListComponent} from '..';
 import {CommonModule} from '@angular/common';
@@ -22,7 +22,7 @@ import {selectAngebote} from '../+state/selectors';
 export class AngebotPageComponent {
     angebote$ = this.store.select(selectAngebote);
 
-    constructor(private reiseService: ReiseService,
+    constructor(private reiseService: JourneyService,
                 @Inject(Store) private store: Store<ReiseSlice>) {
         this.store.dispatch(loadAngebote({
             page: 0

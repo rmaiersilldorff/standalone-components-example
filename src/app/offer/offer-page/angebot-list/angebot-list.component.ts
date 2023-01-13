@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Reise} from '../../../journey/models/common';
 import {CommonModule, NgFor} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
-import {ReiseCardComponent} from '../../../journey/reise-card/reise-card.component';
+import {ReiseCardComponent} from '../../../journey/journey-card/reise-card.component';
 
 @Component({
     standalone: true,

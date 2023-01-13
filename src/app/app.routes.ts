@@ -4,12 +4,12 @@ import {WarenkorbPageComponent} from './basket';
 export const appRoutes: Routes = [
     {
         path: 'angebote',
-        loadChildren: () => import('./offers/angebote.routes')
+        loadChildren: () => import('./offer/offer.routes')
           // .then((m) => m.angeboteRoutes)
     },
     {
         path: 'suche',
-        loadChildren: () => import('./search/suche.routes')
+        loadChildren: () => import('./search/search.routes')
          // .then((m) => m.sucheRoutes)
     },
     {path: 'warenkorb', component: WarenkorbPageComponent},

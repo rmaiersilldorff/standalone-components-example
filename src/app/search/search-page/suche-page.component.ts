@@ -1,14 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {ReiseService} from '../../journey/reise.service';
-import {Reise} from '../../journey/models/common';
+import {CommonModule} from '@angular/common';
+import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {first, startWith, switchMap} from 'rxjs/operators';
-import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
-import {BasketService} from '../../basket/basket.service';
-import {ReiseListItemComponent} from '../../journey/reise-card/reise-list-item/reise-list-item.component';
 import {MaterialModule} from '../../material.module';
-import {CommonModule} from '@angular/common';
 import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
+import {ReiseListItemComponent, Reise, JourneyService} from '@journey';
+import {BasketService} from '@basket';
 
 @Component({
   standalone: true,
@@ -30,7 +28,7 @@ export class SuchePageComponent implements OnInit {
   sucheControl = new FormControl<string>('');
   filteredReisen$: Observable<Reise[]>;
 
-  constructor(private reiseService: ReiseService,
+  constructor(private reiseService: JourneyService,
               private basketService: BasketService) {
     reiseService.getAll()
       .pipe(first())

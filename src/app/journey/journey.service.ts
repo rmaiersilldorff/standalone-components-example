@@ -7,7 +7,7 @@ import * as faker from 'faker/locale/de';
 @Injectable({
   providedIn: 'root'
 })
-export class ReiseService {
+export class JourneyService {
 
   counter = 0;
   length = faker.random.number({min: 10, max: 18});
